@@ -10,6 +10,12 @@
         android:layout_height="wrap_content" />
 
     <Button
+        android:id="@+id/btn_task1_2"
+        android:text="题目一 文本对齐"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
         android:id="@+id/btn_task2"
         android:text="题目二"
         android:layout_width="wrap_content"

@@ -25,11 +25,14 @@ public class HomeActivity extends AppCompatActivity {
         Log.d("filePath",getApplicationContext().getExternalFilesDir("Images").getAbsolutePath());
     }
 
-    @OnClick({R.id.btn_task1, R.id.btn_task2})
+    @OnClick({R.id.btn_task1, R.id.btn_task1_2,R.id.btn_task2})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.btn_task1:
                 startActivity(new Intent(this,Task1Activity.class));
+                break;
+            case R.id.btn_task1_2:
+                startActivity(new Intent(this,Task1_2Activity.class));
                 break;
             case R.id.btn_task2:
                 startActivity(new Intent(this,Task2Activity.class));

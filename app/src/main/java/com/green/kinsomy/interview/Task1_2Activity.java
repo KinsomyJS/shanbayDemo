@@ -23,6 +23,7 @@ import com.green.kinsomy.interview.model.ResponseResult;
 import com.green.kinsomy.interview.model.WordResult;
 import com.green.kinsomy.interview.network.observer.CommonObserver;
 import com.green.kinsomy.interview.network.service.ApiService;
+import com.green.kinsomy.interview.view.NewsText;
 import com.green.kinsomy.interview.view.ParaphraseView;
 
 import java.text.BreakIterator;
@@ -32,10 +33,10 @@ import butterknife.ButterKnife;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.schedulers.Schedulers;
 
-public class Task1Activity extends AppCompatActivity {
+public class Task1_2Activity extends AppCompatActivity {
 
     @BindView(R.id.tv_News)
-    TextView tvNews;
+    NewsText tvNews;
 
     private ApiService apiService;
     private ParaphraseView paraphraseView;
@@ -49,7 +50,7 @@ public class Task1Activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_task1);
+        setContentView(R.layout.activity_task1_2);
         ButterKnife.bind(this);
         initView();
         initData();
@@ -129,7 +130,7 @@ public class Task1Activity extends AppCompatActivity {
 
                     @Override
                     protected void onFailure(Throwable e, boolean isNetWorkError) throws Exception {
-                        Toast.makeText(Task1Activity.this,"请求失败",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Task1_2Activity.this,"请求失败",Toast.LENGTH_SHORT).show();
                     }
                 });
     }
@@ -153,7 +154,7 @@ public class Task1Activity extends AppCompatActivity {
 
         show.setDuration(500);
         show.setInterpolator(AnimationUtils
-                .loadInterpolator(Task1Activity.this,
+                .loadInterpolator(Task1_2Activity.this,
                         android.R.anim.accelerate_decelerate_interpolator));
         return show;
     }
@@ -168,7 +169,7 @@ public class Task1Activity extends AppCompatActivity {
 
         hide.setDuration(500);
         hide.setInterpolator(AnimationUtils
-                .loadInterpolator(Task1Activity.this,
+                .loadInterpolator(Task1_2Activity.this,
                         android.R.anim.accelerate_decelerate_interpolator));
         return hide;
     }
