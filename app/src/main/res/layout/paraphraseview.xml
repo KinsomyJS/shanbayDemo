@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:elevation="40dp"
+    android:clickable="true"
+    android:background="@android:color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/cl_result"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+
+        <TextView
+            android:id="@+id/tv_word"
+            android:text="best"
+            tools:text="best"
+            android:textColor="@color/colorPrimary"
+            android:textSize="20sp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tv_phonogram"
+            android:layout_marginLeft="10dp"
+            android:text="dɪkʃəneri"
+            android:textColor="@android:color/darker_gray"
+            app:layout_constraintBaseline_toBaselineOf="@id/tv_word"
+            app:layout_constraintLeft_toRightOf="@id/tv_word"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tv_pronunciation"
+            android:text="@string/pronunciation"
+            tools:text="朗读"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBaseline_toBaselineOf="@id/tv_word"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tv_definition"
+            app:layout_constraintTop_toBottomOf="@id/tv_word"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="20dp"
+            android:text="adj. 最好的\nadv. 最,最好地\nn. 最好的人(或物)\nvt. 胜于"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:id="@+id/iv_expand"
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:src="@mipmap/expand" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tv_fail"
+        android:text="没有查询到结果"
+        android:textSize="18sp"
+        android:textColor="@color/colorPrimary"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="200dp" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/cl_sentence"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/cl_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_sentence"
+            android:textColor="@color/colorPrimary"
+            tools:text="例句dfsfdsfdsf "
+            android:gravity="center"
+            android:text="例句"
+            android:layout_width="match_parent"
+            android:layout_height="150dp" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>
